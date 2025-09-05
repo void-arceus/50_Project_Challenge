@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header-div">
+      <h2>Bill Splitter</h2>
+    </div>
+    <div class="input-div">
+      <div class="input-box">
+        <input type="number" id="bill-amount" placeholder=" " value="">
+        <label for="bill-amount">Bill Amount</label>
+      </div>
+      <div class="input-box">
+        <input type="number" id="people-count" placeholder=" " value="">
+        <label for=" people-count">No. of Persons</label>
+      </div>
+      <div class="tip-input">
+        <p>Do you want to give any tip?</p>
+        <div class="input-label">
+          <input type="radio" id="tipYes" name="tipOption">
+          <label for="tipYes">Yes</label>
+          <input type="radio" id="tipNo" name="tipOption">
+          <label for="tipNo">No</label>
+        </div>
+        <div class="input-box tip-amount-input-display">
+          <input type="number" id="tip-amount" placeholder=" " value="">
+          <label for="tip-amount">Tip Amount</label>
+        </div>
+      </div>
+    </div>
+    <button id="calculate-amount">Calculate</button>
+
+    <!--Display amount per person-->
+    <div class="display-result">
+      <p>Total Bill: <span id="dis-bill-amount">$</span></p>
+      <p>Tip: <span id="dis-tip-amount"></span>$</p>
+      <p>Amount per person: <span id="display-amount">$</span></p>
+      <button id="close-display-result">Okay</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

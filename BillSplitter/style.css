@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  border: none;
+  background: #f8f9fa;
+  height: 550px;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  position: relative;
+}
+
+.container .header-div {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.container .header-div h2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.container .input-div {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-div .input-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box input {
+  width: 90%;
+  padding: 16px 0px 16px 10px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #212529;
+  font-weight: 800;
+}
+
+.input-box label {
+  position: absolute;
+  top: 16px;
+  left: 25px;
+  pointer-events: none;
+  color: #212529;
+  transition: 0.3s ease-in-out all;
+}
+
+.input-box input:focus {
+  outline: 1px solid teal;
+}
+
+.input-box input:focus+label,
+.input-box input:not(:placeholder-shown)+label {
+  top: -8px;
+  left: 20px;
+  font-size: 0.8rem;
+  background-color: #f8f9fa;
+  padding: 0 4px;
+  color: teal;
+  /* highlight color */
+}
+
+.container #calculate-amount {
+  background: #0d6efd;
+  color: #ffffff;
+  border: none;
+  padding: 15px 140px;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.container #calculate-amount:hover {
+  cursor: pointer;
+  background: #0b5ed7;
+}
+
+.tip-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.tip-input #tip-amount {
+  width: 95%;
+}
+
+#tipYes,
+#tipNo {
+  cursor: pointer;
+}
+
+.tip-input .input-label {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tip-input .input-label label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tip-input .tip-amount-input-display {
+  display: none;
+}
+
+.tip-input .tip-amount-input-display.active {
+  display: block;
+}
+
+.display-result {
+  box-sizing: border-box;
+  position: absolute;
+  top: 150px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  height: 230px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+  display: none;
+}
+
+.display-result.active {
+  display: flex;
+}
+
+.display-result #close-display-result {
+  border: none;
+  background: #000000;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 20px;
+  border-radius: 10px;
+  margin-left: 75%;
+  margin-top: 20px;
+  box-shadow: 2px 1px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.display-result #close-display-result:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
