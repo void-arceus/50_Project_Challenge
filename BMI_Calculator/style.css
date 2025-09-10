@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  height: 500px;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.container .header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.header h2 {
+  font-size: 30px;
+}
+
+.container .input-div {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box input {
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px 0px 20px 10px;
+  position: relative;
+}
+
+.input-box label {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  color: teal;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-box input:focus {
+  outline: 1px solid teal;
+}
+
+.input-box input:focus+label,
+.input-box input:not(:placeholder-shown)+label {
+  top: -15px;
+  left: 22px;
+  background-color: #ffffff;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.button-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-div button {
+  border: none;
+  background: blue;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  width: 85%;
+  height: 55px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 2px blue;
+}
+
+.button-div button:hover {
+  cursor: pointer;
+  background: rgb(24, 24, 207);
+}
+
+
+.underweight {
+  position: absolute; 
+  left: 25px;
+  top: 150px;
+  height: 200px; 
+  width: 350px;
+  background: yellow;
+  border-radius: 10px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  display: none;
+}
+
+.underweight p {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.underweight.active {
+  display: flex; 
+}
+
+
+.normal {
+  position: absolute; 
+  left: 25px;
+  top: 150px;
+  height: 200px; 
+  width: 350px;
+  background: green;
+  border-radius: 10px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  display: none;
+}
+
+.normal p {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.normal.active {
+  display: flex; 
+}
+
+
+.overweight {
+  position: absolute; 
+  left: 25px;
+  top: 150px;
+  height: 200px; 
+  width: 350px;
+  background: orange;
+  border-radius: 10px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  display: none;
+}
+
+.overweight p {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff; 
+}
+
+.overweight.active {
+  display: flex; 
+}
+
+.obese {
+  position: absolute; 
+  left: 25px;
+  top: 150px;
+  height: 200px; 
+  width: 350px;
+  background: red;
+  border-radius: 10px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  display: none;
+}
+
+.obese p {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.obese.active {
+  display: flex; 
+}
